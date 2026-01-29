@@ -1,0 +1,7 @@
+testType: "icmp"
+duration: 2        # 测试时长（秒），缩短一点以便快速验证
+packetCount: 2     # 发送包数量
+interval: 1000     # 发送间隔（毫秒）
+payloadSize: 64    # 负载大小（字节）
+dstIp: "192.168.12.200"
+udsSocketPath: "/tmp/upf_ngu.sock"

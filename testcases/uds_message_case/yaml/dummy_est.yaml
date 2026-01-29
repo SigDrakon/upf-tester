@@ -1,0 +1,105 @@
+fseid:
+  seid: 1
+  ipv4Address: ""
+  ipv6Address: ""
+
+createPdrs:
+  - pdrId: 1
+    precedence: 10
+    pdi:
+      sourceInterface: 0
+      fteid:
+        flag: 15
+        chooseId: 2
+      ueAddress:
+        flag: 2
+        ipv4Address: "10.250.0.1"
+        ipv6Address: ""
+      sdfFilter: "permit out ip from any to any"
+      interfaceType3gpp: 11
+    outerHeaderRemoval:
+      desc: 6
+      ext: 1
+    farId: 1
+    urrId: 3
+    qerIds: [1, 2]
+
+  - pdrId: 2
+    precedence: 10
+    pdi:
+      sourceInterface: 1
+      ueAddress:
+        flag: 6
+        ipv4Address: "10.250.0.1"
+        ipv6Address: ""
+      sdfFilter: "permit out ip from any to any"
+      interfaceType3gpp: 17
+    farId: 2
+    urrId: 3
+    qerIds: [1, 2]
+
+createFars:
+  - farId: 1
+    applyAction: 2
+    forwardingParameters:
+      destinationInterface: 1
+      interfaceType3gpp: 17
+
+  - farId: 2
+    applyAction: 2
+    forwardingParameters:
+      destinationInterface: 0
+      interfaceType3gpp: 11
+      outerHeaderCreation:
+        outerHeaderCreationDescription: 0x0100
+        teid: 1
+        ipv4Address: "192.168.12.214"
+
+createUrrs:
+  - urrId: 3
+    measureMethod: 
+      event: 0
+      volum: 1
+      duration: 1
+    reportTriggers:
+      octet1: 0x0
+      octet2: 0x81
+      octet3: 0x00
+    volumeThreshold:
+      flag: 0x01
+      tovol: 10000
+      ulvol: 0
+      dlvol: 0
+    volumeQuota:
+      flag: 0x01
+      tovol: 10000
+      ulvol: 0
+      dlvol: 0
+
+createQers:
+  - qerId: 1
+    gateStatus:
+      ul: 0
+      dl: 0
+    mbr:
+      ul: 10000
+      dl: 10000
+
+  - qerId: 2
+    gateStatus:
+      ul: 0
+      dl: 0
+    mbr:
+      ul: 10000
+      dl: 10000
+
+pdnType: 1
+apnDnn: "ims"
+userId:
+  flag: 1
+  imsi: "460000000000002"
+  imei: ""
+  msisdn: ""
+nodeId:
+  ipv4: "192.168.12.211"
+  ipv6: ""

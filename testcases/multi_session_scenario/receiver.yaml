@@ -1,0 +1,25 @@
+testSteps:
+  # 1. 建立会话 (UE IP: 10.250.0.2)
+  - step: 1
+    type: "session_establishment_request"
+    action: "send"
+    path: "establishment_receiver.yaml"
+
+  - step: 2
+    type: "session_establishment_response"
+    action: "recv"
+  
+  # 2. 保持在线等待接收数据
+  - step: 3
+    type: "sleep"
+    path: "15"
+
+  # # 3. 删除会话
+  # - step: 4
+  #   type: "session_deletion_request"
+  #   action: "send"
+  #   path: "deletion.yaml"
+
+  # - step: 5
+  #   type: "session_deletion_response"
+  #   action: "recv"

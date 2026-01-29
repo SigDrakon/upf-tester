@@ -1,0 +1,5 @@
+testType: "icmp"
+duration: 10
+packetCount: 20
+interval: 500
+payloadSize: 64

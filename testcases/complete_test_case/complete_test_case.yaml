@@ -1,0 +1,50 @@
+testSteps:
+  - step: 1
+    type: "session_establishment_request"
+    action: "send"
+    path: "01_session_establishment_request.yaml"
+
+  - step: 2
+    type: "session_establishment_response"
+    action: "recv"
+    path: ""
+  
+  - step: 3
+    type: "sleep"
+    action: "wait"
+    path: "2"
+
+  - step: 4
+    type: "data_plane_test"
+    action: "icmp"
+    path: "05_data_plane_test.yaml"
+
+  - step: 5
+    type: "sleep"
+    action: "wait"
+    path: "2"
+
+  - step: 6
+    type: "session_modification_request"
+    action: "send"
+    path: "03_session_modification_request.yaml"
+
+  - step: 7
+    type: "session_modification_response"
+    action: "recv"
+    path: ""
+
+  - step: 8
+    type: "sleep"
+    action: "wait"
+    path: "2"
+
+  - step: 9
+    type: "session_deletion_request"
+    action: "send"
+    path: "06_session_deletion_request.yaml"
+
+  - step: 10
+    type: "session_deletion_response"
+    action: "recv"
+    path: ""

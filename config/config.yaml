@@ -1,0 +1,15 @@
+basic:
+  localN4Ip: "192.168.12.211"
+  upfN4Ip: "192.168.12.210"
+testCases:
+  - "../testcases/uds_message_case/uds_verification.yaml"
+dataPlane:
+  gnbIp: "192.168.12.214"
+  n3Ip: "192.168.12.213"
+  n6Ip: "192.168.12.216"
+  dnIp: "192.168.12.217"
+resources:
+  queueSize: 10000
+  startUeIp: "10.250.0.1"
+  startSeId: 1
+  startTeTd: 1

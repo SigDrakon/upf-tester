@@ -1,0 +1,13 @@
+testSteps:
+  - step: 1
+    type: session_establishment_request
+    path: dummy_est.yaml
+  - step: 2
+    type: session_establishment_response
+  - step: 3
+    type: sleep
+    path: "1"
+  - step: 4
+    type: data_plane_test
+    action: icmp
+    path: uds_icmp.yaml

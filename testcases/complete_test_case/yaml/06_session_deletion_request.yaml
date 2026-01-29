@@ -1,0 +1,3 @@
+# Session Deletion Request Configuration
+# This file can be empty as deletion request doesn't require additional IEs
+# The SEID will be set automatically from the session context

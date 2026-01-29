@@ -1,0 +1,6 @@
+testType: "icmp"
+duration: 5        # 测试时长（秒）
+packetCount: 5     # 发送包数量
+interval: 1000     # 发送间隔（毫秒）
+payloadSize: 64    # 负载大小（字节）
+dstIp: "10.250.0.2" # 目标 IPv4 (Receiver UE IP)

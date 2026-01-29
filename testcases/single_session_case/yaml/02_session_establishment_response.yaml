@@ -1,0 +1,9 @@
+messageType: 51
+seid: 1
+sequenceNumber: 0
+nodeId: "192.168.12.210"
+cause: 0
+fseid:
+  seid: 1
+  ipv4Address: ""
+  ipv6Address: ""

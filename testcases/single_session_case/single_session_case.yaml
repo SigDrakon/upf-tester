@@ -1,0 +1,30 @@
+testSteps:
+  - step: 1
+    type: "session_establishment_request"
+    action: "send"
+    path: "01_session_establishment_request.yaml"
+
+  - step: 2
+    type: "session_establishment_response"
+    action: "recv"
+    path: "02_session_establishment_response.yaml"
+  
+  - step: 3
+    type: "sleep"
+    action: "wait"
+    path: "5"
+
+  - step: 4
+    type: "session_modification_request"
+    action: "send"
+    path: "03_session_modification_request.yaml"
+
+  - step: 5
+    type: "session_modification_response"
+    action: "recv"
+    path: "04_session_modification_response.yaml"
+
+  # - step: 5
+  #   type: "data_plane_test"
+  #   action: "icmp"
+  #   path: ""
